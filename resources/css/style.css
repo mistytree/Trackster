@@ -1,0 +1,81 @@
+/* Custom styles for Trackster App */
+html {
+  font-size: 16px;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+/* HEADER Bootstrap Row*/
+.row.header {
+  height: 8.5rem;
+  background-color: rgb(35, 2, 63);
+  padding-top: 2rem;
+  padding-right: 1rem;  /* To prevent overflowing when screen too narrow */
+}
+
+.row.header a {
+  font-family: "Righteous",sans-serif;
+  font-size: 2.5rem;
+  color: rgb(255, 0, 171);
+}
+
+.button.col-xs-1 {
+  padding-right: 1rem;
+}
+
+.btn {
+  border-radius: 1rem;
+  width: 4rem;
+  height: 2.1rem;
+  border: none;
+  background-color: rgb(255, 0, 171);
+}
+
+.btn:hover {
+  background-color: rgb(255, 102, 204);
+}
+
+.btn:focus {  /* WORKS  ONLY PARTIALLY!!! */
+  outline: none;
+}
+
+.form-control {
+  border-radius: 1rem;
+  border: none;        /* Important to get rid of blue outline */
+  padding-left: 1rem;  /* Sets text within search field 1rem off left side */
+  height: 2rem;
+  min-width: 4rem;
+  color: rgb(74, 74, 74);
+}
+
+.form-control:focus {
+  outline: none;
+}
+
+.input, .button {
+  padding-top: .75rem;
+}
+
+@media only screen and (max-width: 30rem) {  /* Turn horizontal scroll on at 480px */
+  .container-fluid {
+    min-width: 30rem;
+  }
+}
+
+/* TITLES Bootstrap Row */
+.row.titles {
+  height: 2rem;
+  padding-right: 1rem;  /* To prevent overflowing when screen too narrow */
+  background-color: rgb(104, 0, 255);
+}
+
+.row .property {
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  padding-top: 0.25rem;
+}
