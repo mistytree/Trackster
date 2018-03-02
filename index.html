@@ -4,16 +4,20 @@
 <head>
   <title>trackster</title>
   <link rel="icon" href="favicon.png" type="image/x-icon">
-  <!-- Loading Google fonts -->
+  <!-- Loading Google fonts. -->
   <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./resources/css/reset.css">
   <!-- Loading Font Awesome -->
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- Loading Bootstrap 4.0.0 from CDN -->
+  <!-- Loading Bootstrap 4.0.0 from CDN. -->
+  <!-- Latest compiled and minified Bootstrap CSS. -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+  <!-- Loading Bootstrap 3.3.7 from CDN. -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="./resources/css/style.css">
-  <!-- Loading jQuery 3.1.1 from CDN -->
+  <link rel="stylesheet" type="text/css" href="./resources/css/animation.css">
+  <!-- Loading jQuery 3.1.1 from CDN. -->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"
           integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
           crossorigin="anonymous"></script>
@@ -22,16 +26,19 @@
   <script type="text/javascript" src="./resources/js/tests.js"></script>
 </head>
 
-<body id="bootstrap-overrides">
+<body>
 
   <header>
 
     <div class="container-fluid">
 
+      <!-- <div class="row header"> -->
       <div class="row header">
 
-        <div class="col-xs-6 col-xs-offset-1">
-          <a href="#">trackster</a>
+        <!-- Container for 'trackster' logo with animation. -->
+        <!-- See _solution/ folder for comparison. Following 3 elements not wrapped in <div> there. -->
+        <div class="col-xs-6 col-xs-offset-1 animate three">
+          <span>t</span><span>r</span><span>a</span><span>c</span><span>k</span><span>s</span><span>t</span><span>e</span><span>r</span>
         </div>
 
         <div class="input col-xs-3">
@@ -39,57 +46,38 @@
         </div>
 
         <div class="button col-xs-1">
-          <!-- Implementing Font Awesome icon to search button -->
+          <!-- Implementing Font Awesome icon 'fa fa-search' to search button. -->
           <button id="search-button" class="btn" type="submit"><i class="fa fa-search" style="font-size: 1.25rem; color: black;"></i></button>
-
         </div>
 
       </div>
 
       <div class="row titles">
 
-        <div class="col-xs-5 col-xs-offset-1 property">Song</div>
-        <div class="col-xs-2 property">Artist</div>
+        <div class="col-xs-5 col-xs-offset-1 property"><a id="sort-song">Song</a></div>
+        <div class="col-xs-2 property"><a id="sort-artist">Artist</a></div>
         <div class="col-xs-2 property">Album</div>
-        <div class="col-xs-2 property">Popularity</div>
+        <div class="col-xs-2 property"><a id="sort-popularity">Popularity</a></div>
 
       </div>
 
     </div>
 
-  </header>
+    <!-- Container to store list of songs returned from Last.fm API -->
+    <div id="songs" class="container-fluid">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!--<div class="container-fluid">
-        <div class="row header">
-          <h1 class="col-xs-7 col-xs-offset-1">trackster</h1>
-          <input class="col-xs-2" id="search-input" placeholder="Search">
-          <i class="fa fa-search fa-2x col-xs-1" id="search-button"></i>
-        </div>
-        <div class="row attributes">
-          <div class="col-xs-4 col-xs-offset-2 attribute">Song</div>
-          <div class="col-xs-2 attribute">Artist</div>
-          <div class="col-xs-2 attribute">Album Art</div>
-          <div class="col-xs-2 attribute">Listeners</div>
-        </div>
+      <!-- Mock-up (template) HTML code for song track (rendered later through trackster.js 'htmlSongRow' variable). -->
+      <!--<div class="row trackster-songs">
+        <div class="col-xs-1 pulled-property"><a href="https://youtu.be/eI_O5_tJ1hA"><i class="fa fa-play-circle-o"></i></a></div>
+        <div class="col-xs-5 pulled-property">xxx</div>
+        <div class="col-xs-2 pulled-property">xxx</div>
+        <div class="col-xs-2 album-art"><img src="" alt="Album Art"></div>
+        <div class="col-xs-2 pulled-property">xxx</div>
       </div>-->
 
+    </div>
+
+  </header>
 
 </body>
 
